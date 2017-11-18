@@ -1,0 +1,10 @@
+{
+  "main": "app.js",
+  "scripts": {
+    "start": "tabris serve"
+  },
+  "dependencies": {    
+    "paho-mqtt": "^1.0.3",
+    "tabris": "^2.1.1"
+  }
+}

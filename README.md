@@ -4,7 +4,7 @@ Paho is smaller and ready to use in browser than mqtt.js browserified version.
 
 Some of the online test brokers support websockets.
 
-iot.eclipse.org           :80 
+iot.eclipse.org           :80
 https://www.eclipse.org/paho/clients/js/utility/
 
 broker.mqttdashboard.com  :8000

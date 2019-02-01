@@ -1,8 +1,8 @@
 require('tabris');
-require('paho-mqtt');
+const Paho = require('paho-mqtt');
 
 // Create a client instance
-let client = new Paho.MQTT.Client('iot.eclipse.org', 80, '/ws', "theclientId");
+let client = new Paho.Client('iot.eclipse.org', 80, '/ws', "theclientId");
 
 // set callback handler
 client.onMessageArrived = onMessageArrived;
@@ -18,9 +18,9 @@ function onConnect() {
   client.subscribe('/thetopic2');
 
   // Create message instances
-  let message1 = new Paho.MQTT.Message('Hello!');
+  let message1 = new Paho.Message('Hello!');
     message1.destinationName = '/thetopic1';
-  let message2 = new Paho.MQTT.Message('Bye!');
+  let message2 = new Paho.Message('Bye!');
     message2.destinationName = '/thetopic2';
 
   // test app over! publishing
